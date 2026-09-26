@@ -4,6 +4,8 @@ A Python-based command-line chatbot and advanced streaming assistant designed to
 
 ## Project Structure
 
+- `app.py`: A lightweight Flask server serving the web interface and proxying API requests to OpenRouter.
+- `templates/index.html`: A beautiful, premium glassmorphic single-page web UI for the chatbot.
 - `main.py`: A standard command-line finance chatbot with retry logic, rate limit handling, and conversation history.
 - `financebot.py`: An advanced command-line assistant featuring streaming responses, system commands, and conversation persistence (saving/loading chat history).
 - `pyproject.toml`: Project configuration specifying python version requirements and dependencies.
@@ -81,6 +83,18 @@ This bot streams the output token by token and supports special commands:
 * `/history` - List all saved conversation files.
 * `/reset` - Start a fresh conversation session.
 * `/exit` - Exit the chatbot.
+
+### 3. Web Interface (`app.py`)
+Run the Flask server:
+```bash
+python app.py
+# Or using uv:
+uv run python app.py
+```
+Once started, open your web browser and go to:
+**[http://127.0.0.1:5000](http://127.0.0.1:5000)**
+
+This web interface features a modern dark-themed glassmorphic design, smooth animations, automatic markdown rendering for bold text and lists, error state notifications, and a responsive view that works on mobile, tablet, or desktop screens.
 
 ---
 
